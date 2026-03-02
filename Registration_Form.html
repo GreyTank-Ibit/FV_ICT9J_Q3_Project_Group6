@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUIKRIDE Fare Calculator</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* SPLIT SCREEN */
+.split-container{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT SIDE */
+.map-section{
+    flex:1;
+    background-color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-right:3px solid #ff6a00;
+}
+
+.map-section img{
+    width:90%;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(255,106,0,0.5);
+}
+
+/* RIGHT SIDE */
+.fare-section{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.fare-box{
+    width:75%;
+    padding:40px;
+    background-color:#1a1a1a;
+    border-radius:20px;
+    border:2px solid #ff6a00;
+    box-shadow:0 0 25px rgba(255,106,0,0.5);
+}
+
+.fare-box h2{
+    color:#ff6a00;
+    margin-bottom:25px;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    background:#111;
+    border:1px solid #ff6a00;
+    color:white;
+    border-radius:8px;
+}
+
+select:focus{
+    outline:none;
+    box-shadow:0 0 8px #ff6a00;
+}
+
+label{
+    color:#ffb37a;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#ff6a00;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff8c1a;
+}
+
+#DisplayAns{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    color:#ffa64d;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #000 !important;
+    border-bottom: 3px solid #ff6a00;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ff6a00 !important;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Make navbar links orange */
+.navbar .nav-link {
+    color: #ff6a00 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #ffb37a !important;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+
+    <a class="navbar-brand me-4" href="#">QUIKRIDE</a>
+
+    <ul class="navbar-nav me-auto d-flex flex-row gap-3">
+      <li class="nav-item">
+        <a class="nav-link" href="page2.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page3.html">Earn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page4.html">Book a Ride</a>
+      </li>
+    </ul>
+
+    <li class="nav-item">
+      <a class="btn btn-success text-white px-3 ms-3" href="main.html">
+        Sign Up
+      </a>
+    </li>
+
+  </div>
+</nav>
+
+<div class="split-container">
+
+    <!-- LEFT SIDE -->
+    <div class="map-section">
+        <div class="map-container">
+            <img id="mapImage" 
+            src="https://www.deiville.com/wp-content/uploads/2023/03/map-of-lrt-line-1-2-and-mrt-3-stations.jpg" 
+            alt="MRT LRT Map">
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="fare-section">
+        <div class="fare-box">
+
+            <h2>Metro Manila Stations</h2>
+
+            <label>Pickup Station</label>
+            <select id="pickup">
+                <option value="0">Baclaran</option>
+                <option value="1">EDSA</option>
+                <option value="2">Libertad</option>
+                <option value="3">Gil Puyat</option>
+                <option value="4">Vito Cruz</option>
+                <option value="5">Quirino</option>
+                <option value="6">Pedro Gil</option>
+                <option value="7">United Nations</option>
+                <option value="8">Central Terminal</option>
+                <option value="9">Carriedo</option>
+                <option value="10">Doroteo Jose</option>
+                <option value="11">Bambang</option>
+                <option value="12">Blumentritt</option>
+                <option value="13">R. Papa</option>
+                <option value="14">5th Avenue</option>
+                <option value="15">Monumento</option>
+                <option value="16">Balintawak</option>
+                <option value="17">Roosevelt</option>
+            </select>
+
+            <label>Dropoff Station</label>
+            <select id="dropoff">
+                <option value="0">Baclaran</option>
+                <option value="1">EDSA</option>
+                <option value="2">Libertad</option>
+                <option value="3">Gil Puyat</option>
+                <option value="4">Vito Cruz</option>
+                <option value="5">Quirino</option>
+                <option value="6">Pedro Gil</option>
+                <option value="7">United Nations</option>
+                <option value="8">Central Terminal</option>
+                <option value="9">Carriedo</option>
+                <option value="10">Doroteo Jose</option>
+                <option value="11">Bambang</option>
+                <option value="12">Blumentritt</option>
+                <option value="13">R. Papa</option>
+                <option value="14">5th Avenue</option>
+                <option value="15">Monumento</option>
+                <option value="16">Balintawak</option>
+                <option value="17">Roosevelt</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="disc">
+                Apply 20% Discount
+            </label>
+
+            <br><br>
+
+            <button onclick="calculateFare()">Calculate Fare</button>
+
+            <button onclick="bookRide()" style="margin-top:10px; background:#28a745;">
+                Book This Ride
+            </button>
+
+
+            <div id="DisplayAns"></div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+// Compute fare
+function calculateFare() {
+
+    let pickup = parseInt(document.getElementById("pickup").value);
+    let dropoff = parseInt(document.getElementById("dropoff").value);
+    let discount = document.getElementById("disc").checked;
+
+    let basefare = 30;
+    let perStationRate = 20;
+
+    let distance = Math.abs(dropoff - pickup);
+
+    let fare = basefare + (distance * perStationRate);
+
+    if (discount) {
+        fare = fare * 0.80;
+    }
+
+    document.getElementById("DisplayAns").innerHTML = "₱ " + fare.toFixed(2);
+}
+
+// Booking popup
+function bookRide() {
+
+    let pickupText = document.getElementById("pickup").selectedOptions[0].text;
+    let dropoffText = document.getElementById("dropoff").selectedOptions[0].text;
+
+    alert("Ride Booked!\n\nFrom: " + pickupText + "\nTo: " + dropoffText + "\n\nYour driver is on the way 🚗");
+}
+
+</script>
+
+</body>
+</html>

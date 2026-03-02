@@ -15,7 +15,7 @@ html, body {
 }
 
 body{
-    background-image: url('https://www.arch2o.com/wp-content/uploads/2018/09/Arch2O-8-tips-for-architecture-photography-beginners-2.jpg');
+    background-image: url('https://www.tripsavvy.com/thmb/OXkfbg5_k0PS3VidcIaCVTvNadI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/a-red-car-drives-on-a-highway-near-the-ocean-113218541-589a03fe5f9b5874ee67a5bc.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -120,14 +120,29 @@ footer {
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">QUIKRIDE</a>
+
+    <!-- Brand + Pages on LEFT -->
+    <a class="navbar-brand me-4" href="#">QUIKRIDE</a>
+
+    <ul class="navbar-nav me-auto d-flex flex-row gap-3">
+      <li class="nav-item">
+        <a class="nav-link text-orange" href="page2.html">Book a Ride</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-orange" href="page3.html">Earn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-orange" href="page4.html">About us</a>
+      </li>
+    </ul>
+
+    <li class="nav-item">
+    <a class="btn btn-success text-white px-3 ms-3" href="main.html">
+        Sign Up
+    </a>
+</li>
+
   </div>
-    <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="page2.html">page2</a></li>
-        <li class="nav-item"><a class="nav-link" href="page3.html">page3</a></li>
-        <li class="nav-item"><a class="nav-link" href="page4.html">page4</a></li>
-        <li class="nav-item"><a class="nav-link" href="page5.html">page5</a></li>
-      </ul>
 </nav>
 
 <br><br>
@@ -135,7 +150,7 @@ footer {
 <!-- FORM -->
 <div class="container text-light form-container">
 
-    <p class="fw-bold display-4">Registration Form</p>
+    <p class="fw-bold display-4">Account Registration Form</p>
 
     <details>
         <summary>Instructions:</summary>
@@ -254,12 +269,15 @@ document.getElementById("instructions").innerHTML =
 "Please fill out the following fields with accurate information. Review everything carefully before submitting your QUIKRIDE account.";
 
 function checkPassword(event) {
+    event.preventDefault(); // stop default form submit
+
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("passwordconf").value;
 
     if(password !== confirmPassword){
-        event.preventDefault();
         window.alert("Passwords do not match!");
+    } else {
+        window.location.href = "home.html"; // change to your homepage file
     }
 }
 
@@ -267,4 +285,3 @@ function checkPassword(event) {
 
 </body>
 </html>
-

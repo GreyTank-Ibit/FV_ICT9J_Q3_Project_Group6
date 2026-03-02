@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QUIKRIDE Registration</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html, body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #232323;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ff8c00;
+    padding: 0;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.navbar {
+    background-color: #000000 !important;
+    border-bottom: 3px solid #ff8c00;
+    padding: 5px 0 !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand, .nav-link {
+    color: #ff8c00 !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-nav {
+    margin-left: 0 !important;
+    flex-grow: 0 !important;
+}
+
+.container-fluid {
+    justify-content: flex-start !important;
+}
+
+.hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff8c00;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #ff8c00;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('https://thumbs.dreamstime.com/b/young-asian-indian-man-showing-thumbs-up-driving-car-156487759.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1, .hero p {
+    color: #ff8c00;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ff8c00;
+    text-align: center;
+}
+
+/* OFFER BOX IMPROVEMENT */
+.offer-box {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+    border: 1px solid #2c2c2c;
+    height: 100%;
+}
+
+.offer-box:hover {
+    transform: translateY(-6px);
+    border-color: #ff8c00;
+    box-shadow: 0 8px 20px rgba(255,140,0,0.15);
+}
+
+.offer-box h5 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #ff8c00;
+}
+
+.offer-box p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.offer-box ul {
+    padding: 0;
+    list-style: none;
+}
+
+.offer-box ul li {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin-bottom: 6px;
+}
+
+.how-it-works {
+    background-color: #232323;
+    padding: 60px 0;
+}
+</style>
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#">QUIKRIDE</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="page2.html">Book a Ride</a></li>
+        <li class="nav-item"><a class="nav-link" href="page3.html">Earn</a></li>
+        <li class="nav-item"><a class="nav-link" href="page4.html">About Us</a></li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="btn btn-success text-white px-3" href="main.html">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container-main">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>We guarantee the QUIKest.</h1>
+            <p>Easily get to your destination with QuikRide!</p>
+        </div>
+    </div>
+</div>
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title mb-5">WHAT WE OFFER</h2>
+
+    <div class="row text-center">
+
+      
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>CAR RIDES</h5>
+          <p>Comfortable and affordable rides across the city.</p>
+          <ul>
+            <li>Professional drivers</li>
+            <li>Air-conditioned vehicles</li>
+            <li>24/7 availability</li>
+          </ul>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>MOTORCYCLE TAXI</h5>
+          <p>Beat traffic with fast and reliable transport.</p>
+          <ul>
+            <li>Trained riders</li>
+            <li>Helmet & safety gear</li>
+            <li>Quick pickup time</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>DELIVERY SERVICE</h5>
+          <p>Quick and secure parcel delivery service.</p>
+          <ul>
+            <li>Same-day delivery</li>
+            <li>Real-time tracking</li>
+            <li>Secure handling</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="section-title mb-5">HOW IT WORKS</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>1. Book</h5>
+          <p>Select your pickup and drop-off location in the app.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>2. Ride</h5>
+          <p>We match you with the nearest driver or rider for a fast pickup.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="offer-box">
+          <h5>3. Pay & Rate</h5>
+          <p>Cashless payment and rate your driver for safety & quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center mt-4 mb-3">
+    <p>QUIKRIDE ©2026</p>
+</footer>
+<script>
+</script>
+
+</body>
+</html>
